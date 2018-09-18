@@ -1,5 +1,5 @@
 #include <iostream>
-#include <sstream>
+#include <sstream> // oh stringstream that's neat maybe that's convenient
 #include <fstream>
 
 #include <vector> //hmmm what's this maybe this is useful
@@ -15,12 +15,11 @@ struct Pixel {
 
 int main() {
   int width = 0;
-  int height = 0;
 
   ifstream in;
   in.open("in.data", ios::in);
 
-  if(in.is_open()) {
+  if(in.is_open()) { //if the file is open
     string line;
     getline(in, line); //stores a line in line
     width = stoi(line);
@@ -37,13 +36,13 @@ int main() {
       
     }
 
-    cout << "Width = " << width << endl;
+    cout << "Width = " << width << endl; //Print to console
     cout << "Height = " << height << endl;
 
     ofstream out;
     out.open("out.ppm", ios::out);
-    if(out.is_open()) {
-      out << "P3" << endl;
+    if(out.is_open()) { //if the file is open
+      out << "P3" << endl; //write to file
       out << width << " " << height << endl; 
       out << 255 << endl;
 
