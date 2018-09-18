@@ -52,7 +52,7 @@ int main() {
     out << width << " " << height << endl; 
     out << 255 << endl;
 
-    //TODO writing your pixel data in npm form
+    //TODO writing your pixel data in ppm form
     
     out.close();
   }
