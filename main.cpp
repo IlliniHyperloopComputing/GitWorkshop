@@ -1,6 +1,7 @@
 #include <iostream>
 #include <sstream> // oh stringstream that's neat maybe that's convenient
 #include <fstream>
+#include <string>
 
 #include <vector> //hmmm what's this maybe this is useful
 
@@ -31,9 +32,27 @@ int main() {
     //TODO set up data structures
     // maybe a 2d vector would be useful?
 
+    Pixel picture[125][125];
+	
+    int x = 0;
+    int y = 0;
+    int r = 0;
+    int g = 0;
+    int b = 0;
     while(getline(in, line)){  //reads a line at a time
+        //TODO read in pixel data
+	   stringstream stream(line);
+        
+         stream>>x;
+         stream>>y;
+         stream>>red;
+         stream>>green;
+         stream>>blue;
 
-      //TODO read in pixel data
+         picture[x][y].r = 	red;
+         picture[x][y].g = 	green;
+         picture[x][y].b = 	blue;
+     }
       
     }
 
@@ -48,7 +67,9 @@ int main() {
       out << 255 << endl;
 
       //TODO writing your pixel data in ppm form
-      
+      for (int i = 0; i < 125; i++
+      out <<  <<;      
+
       out.close();
     }
     in.close();  
