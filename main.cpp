@@ -29,12 +29,20 @@ int main() {
     height = stoi(line);
 
     //TODO set up data structures
-    // maybe a 2d vector would be useful?
+    Pixel arrPix[125][125];// maybe a 2d vector would be useful?
+    int x;
+    int y;
 
     while(getline(in, line)){  //reads a line at a time
 
       //TODO read in pixel data
-      
+      stringstream stream(line);
+
+      stream >> x;
+      stream >> y;
+      stream >> arrPix[x][y].r;
+      stream >> arrPix[x][y].g;
+      stream >> arrPix[x][y].b;
     }
 
     cout << "Width = " << width << endl; //Print to console
@@ -48,7 +56,12 @@ int main() {
       out << 255 << endl;
 
       //TODO writing your pixel data in ppm form
-      
+      for(int i = 0; i < 125; i++){
+	  for(int j = 0; j < 125; j++){
+	      out << arrPix[i][j].r << " " << arrPix[i][j].g << " " << arrPix[i][j].b << "\t";
+	  }
+	  out << endl;
+      }
       out.close();
     }
     in.close();  
