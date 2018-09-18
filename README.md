@@ -4,20 +4,18 @@ Let's do a little problem to learn Git and a little bit of C++
 
 In this problem, you are provided an input file "input.data" describing a scrambled image. It is in this form:
 ```
-[width]\n
+[width]
 
-[height]\n
+[height]
 
-[x] [y] [r] [g] [b]\n
+[x] [y] [r] [g] [b]
 
-[x] [y] [r] [g] [b]\n
+[x] [y] [r] [g] [b]
 
-[x] [y] [r] [g] [b]\n
+[x] [y] [r] [g] [b]
 
 ...
 ```
-
-\n is the newline character
 
 width is the width of the image
 
