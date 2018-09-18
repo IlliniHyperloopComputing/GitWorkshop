@@ -28,12 +28,13 @@ int main() {
     getline(in, line);
     height = stoi(line);
 
-    //TODO set up data structures
+    Pixel name [125][125] //TODO set up data structures
     // maybe a 2d vector would be useful?
 
     while(getline(in, line)){  //reads a line at a time
 
-      //TODO read in pixel data
+          stringstream stream(line);
+//TODO read in pixel data
       
     }
 
