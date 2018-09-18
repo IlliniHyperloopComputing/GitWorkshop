@@ -15,6 +15,7 @@ struct Pixel {
 
 int main() {
   int width = 0;
+  int height = 0;
 
   ifstream in;
   in.open("in.data", ios::in);
