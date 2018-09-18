@@ -41,6 +41,7 @@ Run `make` to build and `./workshop` to run your code. Good luck!
 **Helpful Links**
 
 [Parsing strings in c++](https://stackoverflow.com/questions/17724925/parse-string-containing-numbers-into-integer-array)
+
 [2D Vectors in c++](https://stackoverflow.com/questions/9694838/how-to-implement-2d-vector-array)
 
 **Extra credit:**
