@@ -30,11 +30,20 @@ int main() {
 
     //TODO set up data structures
     // maybe a 2d vector would be useful?
+    
+    Pixel temp[125][125];
+    
 
     while(getline(in, line)){  //reads a line at a time
-
-      //TODO read in pixel data
-      
+         string kill = line;
+         int x,y;
+         stringstream stream(kill); 
+         stream>>x;
+         stream>>y;
+         stream>>temp[x][y].r;
+         stream>>temp[x][y].g;
+         stream>>temp[x][y].b;
+         
     }
 
     cout << "Width = " << width << endl; //Print to console
@@ -48,7 +57,16 @@ int main() {
       out << 255 << endl;
 
       //TODO writing your pixel data in ppm form
-      
+      for (int i = 0; i < 125; i++) {
+          for (int j = 0; j < 125; j++) {
+              out << temp[i][j].r << " ";
+              out << temp[i][j].g << " ";
+              out << temp[i][j].b << " ";
+              out << " ";
+          }
+          out << endl;
+      }
+
       out.close();
     }
     in.close();  
