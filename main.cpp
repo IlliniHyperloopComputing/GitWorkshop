@@ -28,13 +28,17 @@ int main() {
     getline(in, line);
     height = stoi(line);
 
+    Pixel color[125][125];
     //TODO set up data structures
     // maybe a 2d vector would be useful?
 
     while(getline(in, line)){  //reads a line at a time
-
+	stringstream stream(getline(in, line));
       //TODO read in pixel data
-      
+      while(stream){
+        int n;
+        stream>>
+      }
     }
 
     cout << "Width = " << width << endl; //Print to console
