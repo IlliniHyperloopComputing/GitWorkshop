@@ -33,7 +33,12 @@ int main() {
 
     while(getline(in, line)){  //reads a line at a time
 
-      //TODO read in pixel data
+     stringstream line(num);
+
+    while(line){
+        int n;
+        line>>n;
+        cout<<n<<endl;
       
     }
 
