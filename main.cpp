@@ -30,10 +30,22 @@ int main() {
 
     //TODO set up data structures
     // maybe a 2d vector would be useful?
+	Pixel name[125][125];
+	
 
     while(getline(in, line)){  //reads a line at a time
 
       //TODO read in pixel data
+	stringstream stream(line);
+	int h, w, r, g, b;
+	stream >> h;
+	stream >> w;
+	stream >> r;
+	stream >> g;
+	stream >> b;
+	name[h][w].r = r;
+	name[h][w].g = g;
+	name[h][w].b = b;
       
     }
 
@@ -48,6 +60,15 @@ int main() {
       out << 255 << endl;
 
       //TODO writing your pixel data in ppm form
+	int i, j;
+	for(i = 0; i < 125; i++) {
+	for(j = 0; j < 125; j++) {
+	
+	out << name[i][j].r << " " << name[i][j].g << " " << name[i][j].b << " ";
+
+	}
+	out << endl;
+	}
       
       out.close();
     }
