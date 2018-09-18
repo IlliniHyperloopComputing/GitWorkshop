@@ -1,4 +1,5 @@
 #include <iostream>
+#include <sstream>
 #include <fstream>
 
 #include <vector> //hmmm what's this maybe this is useful
@@ -28,6 +29,7 @@ int main() {
     height = stoi(line);
 
     //TODO set up data structures
+    // maybe a 2d vector would be useful?
 
     while(getline(in, line)){  //reads a line at a time
 
