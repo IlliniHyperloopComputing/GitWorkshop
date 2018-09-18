@@ -29,11 +29,22 @@ int main() {
     height = stoi(line);
 
     //TODO set up data structures
-    // maybe a 2d vector would be useful?
+    // maybe a 2d vector would be useful?	
+	Pixel array[width][height];
 
     while(getline(in, line)){  //reads a line at a time
+	int x,y;
 
       //TODO read in pixel data
+
+	stringstream stream(line);
+	stream >> x;
+	stream >> y;
+	stream >> array[x][y].r;
+	stream >> array[x][y].g;
+	stream >> array[x][y].b;
+
+	
       
     }
 
@@ -48,12 +59,19 @@ int main() {
       out << 255 << endl;
 
       //TODO writing your pixel data in ppm form
+	for (int i=0;i<width;i++){
+		for (int j=0;j<height;j++){
+		
+			out<< array[i][j].r<<" "<<array[i][j].g<<" "<<array[i][j].b<<" ";
+			
+		}
+		out<<"\n";
+	}
       
       out.close();
     }
     in.close();  
   }
-
-
-
 }
+
+
