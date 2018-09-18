@@ -1,10 +1,15 @@
 #include <iostream>
 #include <fstream>
 
+#include <vector> //hmmm what's this maybe this is useful
+
 using namespace std;
 
 struct Pixel {
  //hmm this could be useful but who knows
+ int r;
+ int g;
+ int b;
 };
 
 int main() {
@@ -22,9 +27,18 @@ int main() {
     getline(in, line);
     height = stoi(line);
 
-    //TODO read in pixel data
+    //TODO set up data structures
+
+    while(getline(in, line)){  //reads a line at a time
+
+      //TODO read in pixel data
+      
+    }
+
     in.close();  
   }
+
+
 
   cout << "Width = " << width << endl;
   cout << "Height = " << height << endl;

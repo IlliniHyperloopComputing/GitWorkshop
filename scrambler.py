@@ -23,5 +23,5 @@ with open("out.data", "w+") as f:
     for i in scrambled:
         x = i % width
         y = int((i - x) / width)
-        f.write("{}, {}, {}, {}, {}\n".format(x, y, img[x][y][0], img[x][y][1], img[x][y][2]))
+        f.write("{} {} {} {} {}\n".format(x, y, img[x][y][0], img[x][y][1], img[x][y][2]))
 
