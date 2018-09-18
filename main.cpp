@@ -37,23 +37,23 @@ int main() {
       
     }
 
+    cout << "Width = " << width << endl;
+    cout << "Height = " << height << endl;
+
+    ofstream out;
+    out.open("out.ppm", ios::out);
+    if(out.is_open()) {
+      out << "P3" << endl;
+      out << width << " " << height << endl; 
+      out << 255 << endl;
+
+      //TODO writing your pixel data in ppm form
+      
+      out.close();
+    }
     in.close();  
   }
 
 
 
-  cout << "Width = " << width << endl;
-  cout << "Height = " << height << endl;
-
-  ofstream out;
-  out.open("out.ppm", ios::out);
-  if(out.is_open()) {
-    out << "P3" << endl;
-    out << width << " " << height << endl; 
-    out << 255 << endl;
-
-    //TODO writing your pixel data in ppm form
-    
-    out.close();
-  }
 }
